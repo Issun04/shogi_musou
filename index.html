@@ -2,8 +2,22 @@
 <head><link rel="manifest" href="manifest.json"></head>
 <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./service-worker.js");
+    window.addEventListener("load", async () => {
+
+        // 既にこのページはService Workerに制御されている
+        if (navigator.serviceWorker.controller) {
+            return;
+        }
+
+        try {
+            await navigator.serviceWorker.register("./service-worker.js");
+        } catch (e) {
+            console.log(e);
+        }
+    });
 }
+
+
 </script>
 <script src="https://cdn.jsdelivr.net/gh/kitao/pyxel/wasm/pyxel.js"></script>
 <script>
