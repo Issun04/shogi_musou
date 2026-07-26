@@ -1,4 +1,4 @@
-const CACHE_NAME = "shogi-v3";
+const CACHE_NAME = "shogi-v4";
 
 const FILES_TO_CACHE = [
   "./",
