@@ -1,7 +1,8 @@
-const CACHE_NAME = "shogi-v1";
+const CACHE_NAME = "shogi-v2";
 
 const FILES_TO_CACHE = [
   "./",
+  "./service-worker.js",
   "./index.html",
   "./manifest.json",
   "./pyxel.js",
